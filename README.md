@@ -1,8 +1,6 @@
 # Love-me-Block-me
 a dating game that is based on true events. Take your dating skills to the next level!
 
-
-READ ME
 Overview
 Love me, Block me is an interactive game based on true events. The user will interact with a pre-programmed avatar who will randomly display an action based on pre-programmed options. Based on the option, the user will gain points or lose points. Gaining points results from the avatar randomly selecting a “good action” while a “bad action” results in negative points. The actions are listed below: 
 Good actions
