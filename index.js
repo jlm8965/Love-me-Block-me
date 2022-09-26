@@ -1,6 +1,22 @@
-// //listen for click for start button
-// document.addEventListener('click', startButton)
+//function to fade out title page image
+function fadeOutEffect() {
+    var fadeTitlePage = document.getElementsByClassName("titleImage")[0];
+    var fadeEffect = setInterval(function () {
+        if (!fadeTitlePage.style.opacity) {
+            fadeTitlePage.style.opacity = 1;
+        }
+        if (fadeTitlePage.style.opacity > 0) {
+            fadeTitlePage.style.opacity -= 0.1;
+        } else {
+            clearInterval(fadeEffect);
+        }
+    }, 200);
+}
 
+//function for removal of image that just faded out (title page)
+function removeImage() {
+    document.getElementsByClassName("titleImage")[0].remove()
+    }
 //select text element
 const textElement = document.getElementById('text')
 //select option buttons
@@ -18,13 +34,13 @@ function startGame() {
 
 }
 
-
 //select option function
 function selectOption(option) {
   const nextTextNodeId = option.nextText
   if (nextTextNodeId <= 0) {
     return startGame()
   }
+
   //resets to state. returns new object that's set to current state
   state = Object.assign(state,option.setState)
   showTextNode(nextTextNodeId)
@@ -37,6 +53,7 @@ function showTextNode(textNodeIndex) {
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
 }
+
 //looping through all options
 textNode.options.forEach(option => {
     if (showOption(option)) {
@@ -262,3 +279,25 @@ const textNodes= [
 
 //starting game
 startGame()
+
+//listen for click to reset game
+document.querySelector('.reset-btn').addEventListener('click', function(){
+    window.location.reload();
+    return false;
+  });
+//click for fadeout function
+  document.getElementsByClassName("titleImage")[[0]].addEventListener('click', fadeOutEffect);
+
+
+//space for removal of image that just faded out (title page)
+document.body.onkeyup = function(e) {
+    if (e.key == " " ||
+        e.code == "Space" ||      
+        e.keyCode == 32      
+    ) {
+      removeImage()
+    }
+  }
+
+
+    

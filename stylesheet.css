@@ -11,7 +11,7 @@ body {
     align-items: center;
     width: 100vw; 
     height: 100vh; 
-    background-image: url(https://lh3.googleusercontent.com/LunxEOYeQAvZ2iXZMSAyMZxBgHRheVx7ysuzRkHq3Uku17obc6xP_yZSshCo6aO7M210YNlC1kpP2vzf9I5MYgrfcJjjTdN3_s2YCpol4CS9UxLL72qsC2MiZ9MCxT5VsiNfhdORkOf_VhJBNqH4JoNI_IKiqusDfhW3DE-VuIodaxfe8IlyVNfL9kWN8QdghYzZ6MTUVYhLfXCRBJDdvlKbVg_U40LQvLqbFCa7m3DFAIed5ldBQobvD731irr_FWaFAOEik7681vAs9o1Q6nNZQ_nO0yx05Ictjoh3_rXFJWCy5oETvtQ5Hnxi32hwSzO3MdSrVIv06rM4Werg7qD2lTgLiMRN_nbo5WBs_AjrUXfVd_nCtJJabjZ2AFixs7yXlOKY0rY1DDNxhYWi2iauWZ0a4gNG38LrkgM5DHyM0Q_Zabf9seDWcXa9-8QV8MJlLzXpnUYq_zswLOG_wy7cDFlakrpFDXxfctiLozIOe6D5HyuczuZSHXu1sqMhgodZGBIaZcYLc1Xp78Wje2A3hnUGlqBFb75FOvdrSB5a8jQ5wZYfrTdJwt518JEHT_cLMmfAtTaYMHVFD-rcD2AT9_BpjOgB3PQbc5VMGMIzccnIpmjbkH7SICaH3cuHfOQslYJy5_LdSWZm5K-mXSkWiub_sF6Pv9iG8vDCrYYF3ogOUmKtAx9EVoaR_61ZSIQRYvYq41pnY3qVBOhgaM_17eOBJcrv69tVYuqclK0n0BDcc1R3ukTKcNvc=w1306-h721-no?authuser=0);  
+    background-image: url(https://lh3.googleusercontent.com/LunxEOYeQAvZ2iXZMSAyMZxBgHRheVx7ysuzRkHq3Uku17obc6xP_yZSshCo6aO7M210YNlC1kpP2vzf9I5MYgrfcJjjTdN3_s2YCpol4CS9UxLL72qsC2MiZ9MCxT5VsiNfhdORkOf_VhJBNqH4JoNI_IKiqusDfhW3DE-VuIodaxfe8IlyVNfL9kWN8QdghYzZ6MTUVYhLfXCRBJDdvlKbVg_U40LQvLqbFCa7m3DFAIed5ldBQobvD731irr_FWaFAOEik7681vAs9o1Q6nNZQ_nO0yx05Ictjoh3_rXFJWCy5oETvtQ5Hnxi32hwSzO3MdSrVIv06rM4Werg7qD2lTgLiMRN_nbo5WBs_AjrUXfVd_nCtJJabjZ2AFixs7yXlOKY0rY1DDNxhYWi2iauWZ0a4gNG38LrkgM5DHyM0Q_Zabf9seDWcXa9-8QV8MJlLzXpnUYq_zswLOG_wy7cDFlakrpFDXxfctiLozIOe6D5HyuczuZSHXu1sqMhgodZGBIaZcYLc1Xp78Wje2A3hnUGlqBFb75FOvdrSB5a8jQ5wZYfrTdJwt518JEHT_cLMmfAtTaYMHVFD-rcD2AT9_BpjOgB3PQbc5VMGMIzccnIpmjbkH7SICaH3cuHfOQslYJy5_LdSWZm5K-mXSkWiub_sF6Pv9iG8vDCrYYF3ogOUmKtAx9EVoaR_61ZSIQRYvYq41pnY3qVBOhgaM_17eOBJcrv69tVYuqclK0n0BDcc1R3ukTKcNvc=w1306-h721-no?authuser=0);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -44,20 +44,6 @@ body {
 }
 
 
-.Instructions {
-    background-color: hsl(248, 53%, 58%);
-    border: 1px solid hsl(248, 53%, 30%);
-    border-radius: 5px; 
-    padding: 5px 10px; 
-    color: white;
-    outline: none; 
-} 
-
-.Instructions:hover {
-    border-color: white; 
-}
-
-
 .btn-grid {
     margin-top: 20px; 
     
@@ -70,38 +56,44 @@ body {
     padding: 5px 10px; 
     color: white; 
     outline: none; 
+    margin: 5px; 
+}
+  
+.btn:hover {
+    border-color: white; 
 }
 
-.startButton {
+.reset-btn {
     background-color: hsl(248, 53%, 58%);
     border: 1px solid hsl(248, 53%, 30%);
     border-radius: 5px; 
     padding: 5px 10px; 
-    color: white;
+    color: white; 
     outline: none; 
-    
+    margin: 5px;
 }
 
-.titlePage {
-    position: absolute; 
-    bottom: 10px;
-    width: 50%; 
-    width:300px; 
-    max-width: 100%; 
-    padding: 10px; 
-    text-align: center; 
-    margin: 0 auto; 
-    display: block; 
-} 
-
-.startButton:hover {
-    border-color: white; 
-}  
-
-.btn:hover {
+.reset-btn:hover {
     border-color: white; 
 }
 
 #text {
     color: hsl(248, 53%, 30%);
 }
+
+.titleImage { 
+position: absolute; 
+top:0px;
+right:0px;
+bottom:0px;
+left:0px;
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+
+
+
+
+
+
