@@ -1,16 +1,18 @@
 //function to fade out title page image
 function fadeOutEffect() {
-    var fadeTitlePage = document.getElementsByClassName("titleImage")[0];
-    var fadeEffect = setInterval(function () {
-        if (!fadeTitlePage.style.opacity) {
-            fadeTitlePage.style.opacity = 1;
-        }
-        if (fadeTitlePage.style.opacity > 0) {
-            fadeTitlePage.style.opacity -= 0.1;
-        } else {
-            clearInterval(fadeEffect);
-        }
-    }, 200);
+	// Use const or let when declaring varibles
+	var fadeTitlePage = document.getElementsByClassName('titleImage')[0]
+	// Use const or let when declaring varibles
+	var fadeEffect = setInterval(function () {
+		if (!fadeTitlePage.style.opacity) {
+			fadeTitlePage.style.opacity = 1
+		}
+		if (fadeTitlePage.style.opacity > 0) {
+			fadeTitlePage.style.opacity -= 0.1
+		} else {
+			clearInterval(fadeEffect)
+		}
+	}, 200)
 }
 
 //function for removal of image that just faded out (title page)
@@ -69,6 +71,7 @@ textNode.options.forEach(option => {
 
 //showing options
 function showOption(option) {
+    // Better to use `!option.requiredState` instead of a loose null check here
     return option.requiredState == null || option.requiredState(state)
 }
 
@@ -291,13 +294,9 @@ document.querySelector('.reset-btn').addEventListener('click', function(){
 
 //space for removal of image that just faded out (title page)
 document.body.onkeyup = function(e) {
-    if (e.key == " " ||
-        e.code == "Space" ||      
-        e.keyCode == 32      
-    ) {
-      removeImage()
-    }
-  }
-
-
-    
+	// Checking for loose equality is not best practice switch to strict equality `e.key === ' ' || e.code === 'Space' || e.keyCode === 32`
+	if (e.key == ' ' || e.code == 'Space' || e.keyCode == 32) {
+		removeImage()
+	}
+}
+// always clean up the extra lines at the end of your code file and just leave one blank line at the end of the page
